@@ -17,7 +17,7 @@ while hungry:
     if response == "Yes":
         print("I'm so happy I brought food!")
         hungry = False
-    elif response == "No":
+    elif response == "No": #what would happen if here we had another if? 
         print("Oh no! I should have packed food.")
         hungry = False
     else:

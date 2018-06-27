@@ -1,7 +1,5 @@
 # --- Define your functions below! ---
 
-#  BROKEN
-
 # The chatbot introduces itself and gives the user instructions.
 def intro():
   print("Hi, my name is Phyllis. Let's talk!")
