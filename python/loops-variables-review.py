@@ -1,19 +1,14 @@
 
-# VARIABLES
-num1 = 50
-num2 = 60
-sum = num1 + num2
-print(sum)
-
 # FOR LOOP FOR ELEMENTS
 # FOR LOOP FOR INDEX
+
 animals = ["rabbit", "turkey", "panda"]
 
-for animal in animals:
-    print(animal)
-
-for index in range(len(animals)):
-    print(index)
+# for animal in animals:
+#     print(animal)
+#
+# for index in range(len(animals)):
+#     print(index)
 
 # WHILE LOOPS
 hungry = True #if you're going to change a variable in a loop-- you have to declare it outside

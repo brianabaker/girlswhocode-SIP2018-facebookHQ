@@ -6,7 +6,7 @@ def intro():
  # gives NameError: name 'answer' is not defined
  # let's talk about scope!
 
-def process_input():
+def process_input(answer):
   if answer == "hi":
     say_greeting()
   else:
@@ -22,7 +22,8 @@ def main():
   intro()
   while True:
     answer = input("(What will you say?) ")
-    process_input()
+    process_input(answer)
+
 
 # DON'T TOUCH! Setup code that runs your main() function.
 if __name__ == "__main__":

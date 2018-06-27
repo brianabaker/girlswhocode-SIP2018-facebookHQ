@@ -1,4 +1,4 @@
-word = ["Romeo and Juliet"]
+word = "Juliet"
 
 # Converts the word to lowercase
 word = word.lower()
