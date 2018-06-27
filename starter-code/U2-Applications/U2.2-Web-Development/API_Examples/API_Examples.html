@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	
+	<!-- JQuery makes HTTP requests easier. Check out the examples! -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<script src="API_Examples.js" type="text/javascript"></script>
+
+	<title>API Examples</title>
+</head>
+<body>
+	<h3>REST Countries Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p><textarea id="country-name" rows="1" cols ="20">thailand</textarea></p>
+		<button onclick="makeCountryRequest()">Update Country</button>
+	</p>
+	<h3>Sunrise and Sunset Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p class="selected-country">no country selected from REST example</p>
+		<p class="country-data" id="sunset-time">no data</p>
+		<button onclick="makeSunriseSunsetRequest()">Get Sunrise and Sunset Data</button>
+	</p>
+	<h3>Open Notify (ISS) Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p class="selected-country">no country selected from REST example</p>
+		<p class="country-data" id="iss-time">no data</p>
+		<button onclick="makeISSRequest()">Get Next ISS Passover Data</button>
+	</p>
+	<h3>Star Wars Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p id="sw-info">no data</p>
+		<p><textarea id="sw-character" rows="1" cols ="20">luke</textarea></p>
+		<button onclick="makeSWRequest()">Get Character Info</button>
+	</p>
+	<h3>Music Brainz Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p id="arist-info">no data</p>
+		<p>Artist: <textarea id="music-artist" rows="1" cols ="20">queen</textarea> Genre: <textarea id="music-genre" rows="1" cols ="20">rock</textarea></p>
+		<button onclick="makeArtistRequest()">Get Artist Info</button>
+	</p>
+	<h3>Pokemon API Example</h3>
+	<p> <!-- paragraph marker added here for spacing -->
+		<p id="berry-info">no data</p>
+		<p><textarea id="berry-name" rows="1" cols ="20">cheri</textarea></p>
+		<button onclick="makeBerryRequest()">Get Type</button>
+	</p>
+	<footer>
+		<p><br/>---<br/></p>
+		<p>This site uses the <a href="https://restcountries.eu">REST Countries API</a></p>
+		<p>This site uses the <a href="https://sunrise-sunset.org/api">Sunrise and Sunset API</a></p>
+		<p>This site uses the <a href="http://open-notify.org/">Open Notify API</a></p>
+		<p>This site uses the <a href="https://swapi.co/">StarWars API</a></p>
+		<p>This site uses the <a href="https://wiki.musicbrainz.org/Development/JSON_Web_Service">MusicBrainz API</a></p>
+		<p>This site uses the <a href="https://pokeapi.co/">Pokemon API</a></p>
+	</footer>
+</body>
+</html>
