@@ -7,4 +7,3 @@ Solutions and Sample code created by Girls Who Code. Certain materials edited to
 This is for my own personal use and that of my TA's in Girls Who Code's Summer Immersion Program at FacebookHQ.
 
 Credit goes to Girls Who Code.
-# girlswhocode-SIP2018-facebookHQ
