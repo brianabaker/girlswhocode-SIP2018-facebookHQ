@@ -1,6 +1,6 @@
 # --- Define your functions below! ---
 
-# The chatbot introduces itself and gives the user instructions. 
+# The chatbot introduces itself and gives the user instructions.
 def intro():
   print("Hi, my name is Phyllis. Let's talk!")
   print("Type something and hit enter.")
@@ -18,6 +18,7 @@ def process_input(answer):
     return True # The user wants to exit!
   elif is_valid_input(answer, greetings):
     say_greeting()
+    say_joke()
   elif 'joke' in answer:
     say_joke()
   else:
@@ -67,7 +68,7 @@ def say_default():
 #  in valid_responses.
 def is_valid_input(user_input, valid_responses):
   for item in valid_responses:
-    if user_input == item:
+    if user_input.lower() == item:
       # If you find a matching response, the input is
       #  valid for this kind of response.
       return True
