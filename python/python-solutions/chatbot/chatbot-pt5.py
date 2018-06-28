@@ -9,10 +9,8 @@ def intro():
 def process_input(answer):
   # Define a list of possible ways the user might say hello.
   greetings = ["hi", "hello", "hey", "hey there", "sup"]
-
   # Define a list of possible ways the user might say bye.
   farewells = ["bye", "see ya", "goodbye", "quit", "exit"]
-
   if is_valid_input(answer, farewells):
     say_goodbye()
     return True # The user wants to exit!
@@ -24,6 +22,18 @@ def process_input(answer):
   else:
     say_default()
   return False # The chatbot will continue asking for user input.
+ # Check if user_input matches one of the elements
+ #  in valid_responses.
+ def is_valid_input(user_input, valid_responses):
+   for item in valid_responses:
+     if user_input.lower() == item:
+       # If you find a matching response, the input is
+       #  valid for this kind of response.
+       return True
+   # If you didn't find a matching response, after
+   #  going through the entire list, the input
+   #  isn't valid for this kind of response.
+   return False
 
 # Display a greeting message to the user.
 def say_greeting():
@@ -36,8 +46,6 @@ def say_goodbye():
 # Tell the user an interactive knock-knock joke.
 def say_joke():
   print("Let me tell you a joke!")
-
-  # "Knock knock!" "Who's there"?
   valid_responses = ["who's there", "whos there", "who's there?", "whos there?"]
   done = False
   while not done:
@@ -63,19 +71,6 @@ def say_joke():
 # Display a default message to the user.
 def say_default():
   print("That's cool!")
-
-# Check if user_input matches one of the elements
-#  in valid_responses.
-def is_valid_input(user_input, valid_responses):
-  for item in valid_responses:
-    if user_input.lower() == item:
-      # If you find a matching response, the input is
-      #  valid for this kind of response.
-      return True
-  # If you didn't find a matching response, after
-  #  going through the entire list, the input
-  #  isn't valid for this kind of response.
-  return False
 
 # --- Put your main program below! ---
 def main():

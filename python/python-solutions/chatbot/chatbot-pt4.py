@@ -1,6 +1,6 @@
 # --- Define your functions below! ---
 
-# The chatbot introduces itself and gives the user instructions. 
+# The chatbot introduces itself and gives the user instructions.
 def intro():
   print("Hi, my name is Phyllis. Let's talk!")
   print("Type something and hit enter.")
@@ -15,14 +15,6 @@ def process_input(answer):
   else:
     say_default()
 
-# Display a greeting message to the user.
-def say_greeting():
-  print("Hey there!")
-
-# Display a default message to the user.
-def say_default():
-  print("That's cool!")
-
 # Check if user_input matches one of the elements
 #  in valid_responses.
 def is_valid_input(user_input, valid_responses):
@@ -35,6 +27,14 @@ def is_valid_input(user_input, valid_responses):
   #  going through the entire list, the input
   #  isn't valid for this kind of response.
   return False
+
+ # Display a greeting message to the user.
+ def say_greeting():
+   print("Hey there!")
+
+ # Display a default message to the user.
+ def say_default():
+   print("That's cool!")
 
 # --- Put your main program below! ---
 def main():

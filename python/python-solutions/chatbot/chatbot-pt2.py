@@ -7,14 +7,28 @@ def intro():
 
 # Choose a response based on the user's input.
 def process_input(answer):
-  if answer == "hi":
+  valid_greetings = ["hi", "hello", "hey"]
+  valid_goodbye = ["bye", "ciao", "get out of here"]
+  if is_valid_input(answer, valid_greetings):
     say_greeting()
+  elif is_valid_input(answer, valid_goodbye):
+    say_goodbye()
   else:
     say_default()
+
+def is_valid_input(answer, list_to_check):
+  lowercase = answer.lower()
+  for item in list_to_check:
+    if lowercase == item:
+      return True
+  return False
 
 # Display a greeting message to the user.
 def say_greeting():
   print("Hey there!")
+
+def say_goodbye():
+  print("BYEEEEE")
 
 # Display a default message to the user.
 def say_default():
