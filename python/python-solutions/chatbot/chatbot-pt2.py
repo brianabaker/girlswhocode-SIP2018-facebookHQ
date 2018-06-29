@@ -34,7 +34,6 @@ def say_goodbye():
 def say_default():
   print("That's cool!")
 
-
 # --- Put your main program below! ---
 def main():
   intro()
