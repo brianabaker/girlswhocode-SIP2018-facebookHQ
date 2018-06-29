@@ -7,7 +7,7 @@ def main():
   # Load the image from the specified file
     img = filters.load_img(filename)
 
-  # Save the final image
+  # Save the final image (name the file)
     filters.save_img(img, "recolored.jpg")
 
 if __name__ == '__main__':
