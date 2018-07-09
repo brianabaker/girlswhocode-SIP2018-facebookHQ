@@ -1,4 +1,5 @@
 
+
 img {
   height: 50%;
   display: block;
@@ -19,7 +20,7 @@ body {
 }
 
 #navbar a {
-  float: right;
+  float:right;
   padding: 15 5;
   font-size: 19px;
   color: green;
