@@ -38,7 +38,7 @@ function panHome() {
 function panToLocation() {
 	// Step 2: add the basic values we know we'll need
 	var countryName = document.getElementById("country-name").value;
-	
+
 	// Step 4: Let's add an error check to make sure
 	// the person has typed something in.
 	if(countryName === "") {
@@ -53,8 +53,8 @@ function panToLocation() {
 	// How do we get information from this URL. Right now it's
 	// just a url...
 	var query = "https://restcountries.eu/rest/v2/name/"+countryName;
-	
-	// Step 2: Add the conversion from longitude and latitude 
+
+	// Step 2: Add the conversion from longitude and latitude
 	// that we used for our home location!
 	var lon = 0.0;
 	var lat = 0.0;
@@ -63,11 +63,11 @@ function panToLocation() {
 	// Step 2: Add the animation that we used in panHome
 	// and swap out what we pan to! Stop here and run the code.
 	// When it errors, ask the students what they think happened.
-	// Direct them to think about the 0, 0 of longitude and latitude 
+	// Direct them to think about the 0, 0 of longitude and latitude
 	view.animate({
 		center: location, // Location
 		duration: 2000  // Two seconds
 	});
 }
 
-window.onload = init;
+onload = init;

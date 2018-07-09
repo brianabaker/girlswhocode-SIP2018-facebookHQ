@@ -39,4 +39,4 @@ function init() {
 }
 
 // Step 4: We can run the init function when the window loads.
-window.onload = init;
+onload = init;

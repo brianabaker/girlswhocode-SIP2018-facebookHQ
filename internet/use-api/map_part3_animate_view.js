@@ -28,7 +28,7 @@ function init() {
 
 // Step 2: Let's make our button do something!
 // We use "animate" on the view to animate it.
-// To pan the view, we simply need to tell the view 
+// To pan the view, we simply need to tell the view
 // where to go and how long to take to get there.
 function panHome() {
 	view.animate({
@@ -45,4 +45,4 @@ function panHome() {
 // To use the name of a city, we need
 // another API!
 
-window.onload = init;
+onload = init;

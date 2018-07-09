@@ -68,4 +68,4 @@ function panToCountry() {
 	});
 }
 
-window.onload = init;
+onload = init;

@@ -29,18 +29,18 @@ int note_Gs5 = 830; int note_Ab5 = note_Gs5;
 
 void setup()
 {
-  pinMode(PIEZOPIN, OUTPUT);                 // Attach piezo to pin 5. 
-  
+  pinMode(PIEZOPIN, OUTPUT);                 // Attach piezo to pin 5.
+
   servoLeft.attach(13);                      // Attach left signal to pin 13.
   servoRight.attach(12);                     // Attach right signal to pin 12.
   servoLeft.writeMicroseconds(1500);         // Stop left servo.
   servoRight.writeMicroseconds(1500);        // Stop right servo.
-  
-  pinMode(LED1, OUTPUT);                     // Set all LED pins to output.  
+
+  pinMode(LED1, OUTPUT);                     // Set all LED pins to output.
   pinMode(LED2, OUTPUT);
   pinMode(LED3, OUTPUT);
-  
-}  
+
+}
 
 // Example function that defines a dance move.
 void twirlStopShake(){
@@ -72,7 +72,7 @@ void twirlStopShake(){
 
 // Example function that results in 3 LEDs lighting up in sequence.
 void ledSwirl(){
-  
+
   for( int x = 0; x < 3; x++){
       digitalWrite(LED1, HIGH);
       delay(100);
@@ -97,7 +97,7 @@ void piezoGreeting(){
       delay(500);
       tone(PIEZOPIN, note_G5, 200);
       delay(500);
-  } 
+  }
 }
 
 // Sample main program.
@@ -110,12 +110,9 @@ void loop()
   piezoGreeting();
 
   for( int x = 0; x < 5; x++){
-      ledSwirl();   
+      ledSwirl();
       twirlStopShake();
   }
 
   delay(1000);
 }
-
-
-
