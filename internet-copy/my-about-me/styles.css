@@ -41,9 +41,9 @@ body {
   padding: 5 0;
 }
 
-h3 {
+strong {
+  display: block;
   font-size: 18px;
-  margin: 0px;
 }
 
 #change-color {
