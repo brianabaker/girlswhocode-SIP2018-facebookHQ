@@ -12,22 +12,18 @@ body {
   background-color: lavender;
 }
 
-#navbar {
+#navigation {
   border: 1px solid mintcream;
   padding: 20px;
   border-radius: 10px;
   color: green;
 }
 
-#navbar a {
-  float:right;
+#navigation a {
+  float: right;
   padding: 15 5;
   font-size: 19px;
   color: green;
-}
-
-#header-font {
-  font-size: 40px;
 }
 
 .container {
@@ -42,11 +38,16 @@ body {
   padding: 5 0;
 }
 
-strong {
-  display: block;
-  font-size: 18px;
-}
-
 #change-color {
   cursor: pointer;
+}
+
+h3, h4 {
+    margin: 0px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0px;
+  display: inline;
 }

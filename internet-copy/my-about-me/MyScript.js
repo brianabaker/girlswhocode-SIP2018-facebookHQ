@@ -1,7 +1,8 @@
+
 document.addEventListener("DOMContentLoaded", function() {
   console.log("LOADED")
 
-  alert("Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi")
+  // alert("Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi")
   let changeColorLink = document.getElementById("change-color")
   let personalPhoto = document.getElementById("personal-photo")
   let toggle = 0
@@ -9,11 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
   changeColorLink.addEventListener('click', changeColor)
 
   personalPhoto.addEventListener('click', function() {
-    console.log("in the change photo");
-    console.log(personalPhoto.src);
-    if (personalPhoto.src == "file:///Users/flatironschool/Development/girlswhocode/internet/my-about-me/backpack.jpg") {
+    // console.log("in the change photo");
+    // console.log(personalPhoto.src);
+    if (personalPhoto.src == "file:///Users/facebook/development/girlswhocode-SIP2018-facebookHQ/internet-copy/my-about-me/backpack.jpg") {
+      console.log("yes");
       personalPhoto.src = "flowers-crown.png"
-    } else if (personalPhoto.src == "file:///Users/flatironschool/Development/girlswhocode/internet/my-about-me/flowers-crown.png") {
+    } else if (personalPhoto.src == "file:///Users/flatironschool/Development/girlswhocode/internet-copy/my-about-me/flowers-crown.png") {
       personalPhoto.src = "small-cast.png"
     } else {
       personalPhoto.src = "backpack.jpg"
