@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Map Application</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.0.3/css/ol.css" type="text/css">
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.0.3/build/ol.js"></script>
+  </head>
+  <body>
+    <p>
+      <input id="country-name" placeholder="Search by Country"></input>
+      <button onclick="panToLocation()">Pan To Location</button>
+      <button onclick="panHome()">Pan To Home</button>
+    </p>
+    <div id="map" class="map"></div>
+  </body>
+  <script src="api-js.js"></script>
+</html>
