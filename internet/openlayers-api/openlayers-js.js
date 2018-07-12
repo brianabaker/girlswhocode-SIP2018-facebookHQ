@@ -10,7 +10,11 @@ var countryRequest;
 // different brushes used to make the same image. They look different.
 // Some might take more time than others.
 
+// TWO but, let's put all this logic in a function! Putting it in a function will make our code cleaner and it'll be easier for us to debug.
+// a common name for the first thing you want to run is init, short for initilize. it's not a required name like in python. You can call it whatever you want but convention is init.
+
 function init(){
+  //
   ourLoc = ol.proj.fromLonLat([-122.155872, 37.482087])
   // i declared the variable at the top, so now i can use it here
 
