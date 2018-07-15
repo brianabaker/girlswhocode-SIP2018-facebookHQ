@@ -1,7 +1,7 @@
 '''
 In this program, we will generate a word cloud from tweet data.
 
-For students who finish this part of the program quickly, 
+For students who finish this part of the program quickly,
 they might try it on the larger JSON file to see what clouds they can get.
 '''
 
@@ -12,10 +12,10 @@ from wordcloud import WordCloud
 
 #Search term used for this tweet
 #We want to filter this out!
-tweetSearch = "automation" 
+tweetSearch = "automation"
 
 #Get the JSON data
-tweetFile = open("../TwitterData/tweets_small.json", "r")
+tweetFile = open("tweets_small.json", "r")
 tweetData = json.load(tweetFile)
 tweetFile.close()
 
@@ -27,7 +27,7 @@ for tweet in tweetData:
 #Create a Combined Tweet Blob
 tweetblob = TextBlob(combinedTweets)
 
-#This can be useful to see what's possible 
+#This can be useful to see what's possible
 #to do with a Textlob object
 #print(dir(tweetblob))
 
@@ -48,7 +48,7 @@ for word in tweetblob.words:
 	#don't want lower case words smaller than 5 letters
 	if len(word) < 5 and word.upper() != word:
 		continue;
-	
+
 	#Try lower case only, try with upper case!
 	filteredDictionary[word.lower()] = tweetblob.word_counts[word.lower()]
 
@@ -57,4 +57,3 @@ wordcloud = WordCloud().generate_from_frequencies(filteredDictionary)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
-

@@ -2,7 +2,7 @@
 In this program, we will generate a three word clouds from tweet data.
 One for positive tweets, one for negative, and one for neutral tweets.
 
-For students who finish this part of the program quickly, 
+For students who finish this part of the program quickly,
 they might try it on the larger JSON file to see how much longer that takes.
 They might also want to try subjective vs objective tweets.
 '''
@@ -31,7 +31,7 @@ def GetFilteredDictionary(tweetblob, tweetSearch):
 		#don't want lower case words smaller than 5 letters
 		if len(word) < 5 and word.upper() != word:
 			continue;
-		
+
 		#Try lower case only, try with upper case!
 		filteredDictionary[word.lower()] = tweetblob.word_counts[word.lower()]
 
@@ -47,10 +47,10 @@ def AddFigure(filteredDictionary, plotnum, title):
 
 #Search term used for this tweet
 #We want to filter this out!
-tweetSearch = "automation" 
+tweetSearch = "automation"
 
 #Get the JSON data
-tweetFile = open("../TwitterData/tweets_small.json", "r")
+tweetFile = open("tweets_small.json", "r")
 tweetData = json.load(tweetFile)
 tweetFile.close()
 
@@ -83,4 +83,3 @@ AddFigure(GetFilteredDictionary(positiveblob, tweetSearch), 133, "Positive Tweet
 
 #Show all at once
 plt.show()
-

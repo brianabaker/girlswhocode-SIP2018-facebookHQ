@@ -11,7 +11,7 @@ import json
 
 # Next we want to open the JSON file. We tag this file as
 # "r" read only because we are only going to look at the data.
-tweetFile = open("../TwitterData/tweets_small.json", "r")
+tweetFile = open("tweets_small.json", "r")
 
 # We use the JSON library to get data from the file as JSON data.
 tweetData = json.load(tweetFile)
@@ -29,12 +29,12 @@ print("Tweet id: ", tweetData[0]["id"])
 print("Tweet text: ", tweetData[0]["text"])
 
 
-# First ask students how might they use loops 
+# First ask students how might they use loops
 # to print the ["text"] of all the tweets:
 
 # Show them the following two options:
 
-# Explain how here, we're using index and 
+# Explain how here, we're using index and
 # counting the number of tweets in the tweetData
 # using the python len() function.
 for idx in range(len(tweetData)):
