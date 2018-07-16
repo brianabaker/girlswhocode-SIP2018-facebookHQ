@@ -27,20 +27,21 @@ survey = [
 keys = ["name", "age"]
 
 # show them how to iterate over two loops like in this:
-# for x in range(len(survey)):
-#     print(survey[x])
-#     print(keys[x])
-#     print('----------')
+for x in range(len(survey)):
+    print(survey[x])
+    print(keys[x])
+    print('----------')
 # as long as our two lists are the same length, this won't error. And we're making both lists, so we're good!
 
 # so now... let's ask for the user's input after each question, and then assign that input to a dictionary, with each input correspoding to the appropriate key
 
-# for x in range(len(survey)):
-#     response = input(survey[x]+":  ")
-#     print(response)
-#     # show them this works
+for x in range(len(survey)):
+    response = input(survey[x]+":  ")
+    print(response)
+    # show them this works
 #     # ASK: Now how do I assign this response to the dictionary....
-#     answers[keys[x]] = response
+
+    answers[keys[x]] = response
 
 # print(answers)
 
@@ -103,12 +104,8 @@ counter = 0
 # cannot compare between 'int' and 'range'
 for obj in list_of_answers:
     if counter < (len(list_of_answers)-1):
-        print('in the beginning, counter:')
-        print(counter)
         json.dump(obj, file)
         file.write(',\n')
-        print('in the end, counter:')
-        print(counter)
     else:
         print('in the else, counter:')
         print(counter)
