@@ -7,23 +7,23 @@ from textblob import TextBlob
 import matplotlib.pyplot as plt
 
 #Get the JSON data
-tweetFile = open("tweets_small.json", "r")
-tweetData = json.load(tweetFile)
-tweetFile.close()
+tweet_file = open("tweets_small.json", "r")
+tweet_data = json.load(tweet_file)
+tweet_file.close()
 
 #Create a Sentiment List
-polarityList = []
+polarity_list = []
 
 #[OPTIONAL] Subjectivity
-subjectivityList = []
+subjectivity_list = []
 
 #Get Sentiment Data
-for tweet in tweetData:
+for tweet in tweet_data:
 	tweetblob = TextBlob(tweet["text"])
-	polarityList.append(tweetblob.polarity)
+	polarity_list.append(tweetblob.polarity)
 
 	#[OPTIONAL] Subjectivity
-	subjectivityList.append(tweetblob.subjectivity)
+	subjectivity_list.append(tweetblob.subjectivity)
 
-print(polarityList)
-print(subjectivityList)
+print(polarity_list)
+print(subjectivity_list)

@@ -18,40 +18,44 @@ from textblob import TextBlob
 import matplotlib.pyplot as plt
 
 #Get the JSON data
-tweetFile = open("tweets_small.json", "r")
-tweetData = json.load(tweetFile)
-tweetFile.close()
+tweet_file = open("tweets_small.json", "r")
+tweet_data = json.load(tweet_file)
+tweet_file.close()
 
 #Create a Sentiment List
-polarityList = []
+polarity_list = []
 
 #[OPTIONAL] Subjectivity
-# subjectivityList = []
+subjectivity_list = []
 
 #Get Sentiment Data
-for tweet in tweetData:
+for tweet in tweet_data:
 	tweetblob = TextBlob(tweet["text"])
-	polarityList.append(tweetblob.polarity)
+	polarity_list.append(tweetblob.polarity)
 
 	#[OPTIONAL] Subjectivity
-	# subjectivityList.append(tweetblob.subjectivity)
+	subjectivity_list.append(tweetblob.subjectivity)
 
 
 #Create the Graph
-plt.hist(polarityList, bins=[-1.1, -.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1.1])
+# the bins here are the numbers on the y axis x axis (polarity)
+# between -1 and +1
+plt.hist(polarity_list, bins=[-1.1, -.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1.1])
 plt.xlabel('Polarities')
 plt.ylabel('Number of Tweets')
 plt.title('Histogram of Tweet Polarity')
+# this is the number of tweets
 plt.axis([-1.1, 1.1, 0, 100])
 plt.grid(True)
 plt.show()
 
 
 #[OPTIONAL] Subjectivity
-# plt.plot(polarityList, subjectivityList, 'ro')
-# plt.xlabel('Polarity')
-# plt.ylabel('Subjectivity')
-# plt.title('Tweet Polarity vs Subjectivity')
-# plt.axis([-1.1, 1.1, -0.1, 1.1])
-# plt.grid(True)
-# plt.show()
+plt.plot(polarity_list, subjectivity_list, 'ro')
+plt.xlabel('Polarity')
+plt.ylabel('Subjectivity')
+plt.title('Tweet Polarity vs Subjectivity')
+# plt.axis is the x axis
+plt.axis([-1.1, 1.1, -0.1, 1.1])
+plt.grid(True)
+plt.show()

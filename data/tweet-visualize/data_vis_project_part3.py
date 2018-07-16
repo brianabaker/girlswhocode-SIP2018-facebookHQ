@@ -12,28 +12,28 @@ from wordcloud import WordCloud
 
 #Search term used for this tweet
 #We want to filter this out!
-tweetSearch = "automation"
+tweet_search = "automation"
 
 #Get the JSON data
-tweetFile = open("tweets_small.json", "r")
-tweetData = json.load(tweetFile)
-tweetFile.close()
+tweet_file = open("tweets_small.json", "r")
+tweet_data = json.load(tweet_file)
+tweet_file.close()
 
 #Combine All the Tweet Texts
-combinedTweets = ""
-for tweet in tweetData:
-	combinedTweets += tweet['text']
+combined_tweets = ""
+for tweet in tweet_data:
+	combined_tweets += tweet['text']
 
 #Create a Combined Tweet Blob
-tweetblob = TextBlob(combinedTweets)
+tweetblob = TextBlob(combined_tweets)
 
 #This can be useful to see what's possible
 #to do with a Textlob object
 #print(dir(tweetblob))
 
 #Filter Words
-wordsToFilter = ["about", "https", "in", "the", "thing", "will", "could", tweetSearch]
-filteredDictionary = dict()
+words_to_filter = ["about", "https", "in", "the", "thing", "will", "could", tweet_search]
+filtered_dictionary = dict()
 
 for word in tweetblob.words:
 	#skip tiny words
@@ -43,17 +43,17 @@ for word in tweetblob.words:
 	if not word.isalpha():
 		continue
 	#skip words in our filter
-	if word.lower() in wordsToFilter:
+	if word.lower() in words_to_filter:
 		continue
 	#don't want lower case words smaller than 5 letters
 	if len(word) < 5 and word.upper() != word:
 		continue;
 
 	#Try lower case only, try with upper case!
-	filteredDictionary[word.lower()] = tweetblob.word_counts[word.lower()]
+	filtered_dictionary[word.lower()] = tweetblob.word_counts[word.lower()]
 
 #Create the word cloud
-wordcloud = WordCloud().generate_from_frequencies(filteredDictionary)
+wordcloud = WordCloud().generate_from_frequencies(filtered_dictionary)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
