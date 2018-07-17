@@ -46,8 +46,11 @@ print(tweet_data)
 # but! since we are also just grabbing it at that element, and we're not grabbing from two dictionaries, or two lists, we can use the other
 
 # ANOTHER WAY TO DO IT NOT WITH RANGE
-# for tweet in tweet_data:
-#     print('Tweet text: ' + tweet["text"])
-#     print('')
+for tweet in tweet_data:
+    print(tweet["hashtags"])
+    print('')
 
+# for tweet in tweet_data:
+#     print('hashtags: ' + tweet["hashtags"])
+#     print('')
     # YASSSSSS
