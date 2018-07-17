@@ -11,22 +11,22 @@ import json
 
 # Next we want to open the JSON file. We tag this file as
 # "r" read only because we are only going to look at the data.
-tweetFile = open("tweets_small.json", "r")
+file = open("tweets_small.json", "r")
 
 # We use the JSON library to get data from the file as JSON data.
-tweetData = json.load(tweetFile)
+tweet_data = json.load(file)
 
 # We can close the file now that we have locally stored the data.
-tweetFile.close()
+file.close()
 
 # We then print the data of ONE tweet:
 # the [0] denotes the *first* tweet object.
 # We access parts of the tweet using ["NameOfPart"].
-print("Tweet id: ", tweetData[0]["id"])
+print("Tweet id: ", tweet_data[0]["id"])
 
 # First ask students how they might print the text object:
 # Then show them the following code
-print("Tweet text: ", tweetData[0]["text"])
+print("Tweet text: ", tweet_data[0]["text"])
 
 
 # First ask students how might they use loops
@@ -35,15 +35,15 @@ print("Tweet text: ", tweetData[0]["text"])
 # Show them the following two options:
 
 # Explain how here, we're using index and
-# counting the number of tweets in the tweetData
+# counting the number of tweets in the tweet_data
 # using the python len() function.
-for idx in range(len(tweetData)):
-	print("Tweet text: " + tweetData[idx]["text"])
+# for idx in range(len(tweet_data)):
+# 	print("Tweet text: " + tweet_data[idx]["text"])
 
 # Explain here how Python lets you get objects
 # directly without having to use an index.
-for tweet in tweetData:
-	print("Tweet text: " + tweet["text"])
+# for tweet in tweet_data:
+# 	print("Tweet text: " + tweet["text"])
 
 # Encourage students to think about how there are
 # often multiple solutions for each problem, and
