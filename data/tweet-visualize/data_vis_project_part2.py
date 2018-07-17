@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 
 #Get the JSON data
 tweet_file = open("tweets_small.json", "r")
+# tweet_file = open("maybe_tweets_large.json", "r")
 tweet_data = json.load(tweet_file)
 tweet_file.close()
 
@@ -30,14 +31,15 @@ subjectivity_list = []
 
 #Get Sentiment Data
 for tweet in tweet_data:
-	tweetblob = TextBlob(tweet["text"])
-	polarity_list.append(tweetblob.polarity)
-	#[OPTIONAL] Subjectivity
-	subjectivity_list.append(tweetblob.subjectivity)
+    tweetblob = TextBlob(tweet["text"])
+    polarity_list.append(tweetblob.polarity)
+    #[OPTIONAL] Subjectivity
+    subjectivity_list.append(tweetblob.subjectivity)
 
 
 #Create the Graph
-# the bins here are the numbers on the y axis x axis (polarity)
+# the bins here are the numbers on the x axis
+# x axis (polarity)
 # between -1 and +1
 plt.hist(polarity_list, bins=[-1.1, -.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1.1])
 # bins is the amount of distance they want between the x axis

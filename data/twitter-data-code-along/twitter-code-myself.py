@@ -6,14 +6,13 @@ import json
 file = open("tweets_small.json", "r")
 tweet_data = json.load(file)
 file.close()
+
+print(tweet_data)
 # so now i have all that json data, in the variable called tweet_data
 
 # this is like, a lot of data right?
 
 # Let's try to take a look at it a bit
-
-for idx in range(len(tweet_data)):
-    "place" in tweet_data[idx].values()
 
 # how do you think I look at just the first one in this list?
 # ########
@@ -39,14 +38,16 @@ for idx in range(len(tweet_data)):
 # how might we use loops to just print ONLY the text of each tweet? ???
 # I'm going to give you a couple minutes to try to figure it out in pairs, talk it out.
 
+# ONE WAY TO DO IT WITH RANGE
 # for index in range(len(tweet_data)):
 #     print("Tweet text: " + tweet_data[index]["text"])
 #     print('')
 
 # but! since we are also just grabbing it at that element, and we're not grabbing from two dictionaries, or two lists, we can use the other
 
-for tweet in tweet_data:
-    print('Tweet text: ' + tweet["text"])
-    print('')
+# ANOTHER WAY TO DO IT NOT WITH RANGE
+# for tweet in tweet_data:
+#     print('Tweet text: ' + tweet["text"])
+#     print('')
 
     # YASSSSSS

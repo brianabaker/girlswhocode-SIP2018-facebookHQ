@@ -1,5 +1,3 @@
-
-
 spanish_english = {
     "hola": ["hey", "hello"],
     "gato": {"cat": "mean"},
@@ -10,10 +8,6 @@ briana = {
     "age1": 30,
     "age2": 20
 }
-
-
-
-
 # dict = spanish_english["gato"]["cat"]
 
 bool = spanish_english["mujer"]
@@ -21,16 +15,6 @@ bool = spanish_english["mujer"]
 print(bool)
 # hello
 
-
-
-
-
-
-
-
-
-
-#
 # # HAVE THEM DO THIS WITH A TURN AND TALK PARTNER?
 #
 # prices = {
