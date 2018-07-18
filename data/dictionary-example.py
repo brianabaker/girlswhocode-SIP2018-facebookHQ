@@ -15,7 +15,8 @@ bool = spanish_english["mujer"]
 print(bool)
 # hello
 
-# # HAVE THEM DO THIS WITH A TURN AND TALK PARTNER?
+# # HAVE THEM DO THIS FOR A BIT OF REVIEW?
+# WITH A TURN AND TALK PARTNER?
 #
 # prices = {
 #   "banana": 6,

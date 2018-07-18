@@ -1,8 +1,7 @@
 import json
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-
-# import wordcloud from WordCloud
+from wordcloud import WordCloud
 
 #Get the JSON data
 tweet_file = open("tweets-small.json", "r")
@@ -31,13 +30,11 @@ filtered_dictionary = dict()
 
 for word in tweetblob.words:
     print(word)
-    if len(word) < 2:
+    if len(word) < 5:
         continue
     if not word.isalpha():
         continue
     if word.lower() in words_to_filter:
-        continue
-    if len(word) < 5 and word.upper() != word:
         continue
 
     filtered_dictionary[word.lower()] = tweetblob.word_counts[word.lower()]
